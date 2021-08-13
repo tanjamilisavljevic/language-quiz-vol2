@@ -8,15 +8,15 @@
 	<title>Game</title>
 </head>
 <body>
-	<!-- TODO: add a form for the user to play the game -->
+
     <form>
-        <p class="randomChoice"> The word to translate: </p>
+        <p class="randomChoice"> The word to translate: <?php echo $game->randomWord->frenchWord ?> </p>
         <label for="userChoice">Your guess:</label> <br>
         <input type="text" id="userChoice" name="userChoice"><br>
 
         <button type="submit" name="submit">Go</button>
         <p class="userChoice"></p>
-
     </form>
+
 </body>
 </html>
