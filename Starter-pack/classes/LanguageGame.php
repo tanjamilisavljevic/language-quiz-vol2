@@ -4,6 +4,7 @@ class LanguageGame
 {
     private array $words = [];
     public Word $randomWord;
+    public string $endMessage = '';
 
 
     public function __construct()
@@ -17,24 +18,23 @@ class LanguageGame
         }
     }
 
-
     public function run()
     {
         // TODO: check for option A or B
-        if (!empty($_GET['userAnswer']) && isset($GET['submit'])) {
+
+        if (!empty($_POST['userAnswer']) && isset($_POST['submit'])) {
             $this->startGame();
         } else {
             $this->displayRandom();
         }
     }
 
-
     // Option A: user visits site first time (or wants a new word)
-    // TODO: select a random word for the user to translate
+    // done: select a random word for the user to translate
     public function displayRandom()
     {
         $this->randomWord = $this->words[array_rand($this->words, 1)];
-        $_SESSION['translation'] = $this->randomWord->englishWord;
+        $_SESSION['englishWord'] = serialize($this->randomWord);
     }
 
     // Option B: user has just submitted an answer
@@ -43,6 +43,17 @@ class LanguageGame
     public function startGame()
     {
 
-        $userAnswer = $_GET['userAnswer'];
+        $this->randomWord = unserialize($_SESSION['englishWord']);
+        $userAnswer = $_POST['userAnswer'];
+
+
+        if ($this->randomWord->verify($userAnswer) === true)
+        {
+            $this->endMessage = 'Correct!';
+        }
+        else
+        {
+            $this->endMessage = 'False!';
+        }
     }
 }

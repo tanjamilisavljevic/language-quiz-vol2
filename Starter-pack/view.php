@@ -9,13 +9,15 @@
 </head>
 <body>
 
-    <form method="post">
+    <form method="post" action="">
+
         <p class="randomChoice"> The word to translate: <?php echo $game->randomWord->frenchWord ?> </p>
+
         <label for="userAnswer">Your guess:</label> <br>
         <input type="text" id="userAnswer" name="userAnswer"><br>
+        <button type="submit" name="submit"> Go </button>
 
-        <button type="submit" name="submit">Go</button>
-        <p class="endMessage"></p>
+        <p class="endMessage"> <?php echo $game->endMessage ?> </p>
     </form>
 
 </body>

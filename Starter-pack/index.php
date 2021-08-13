@@ -38,4 +38,8 @@ require_once 'classes/Word.php';
 $game = new LanguageGame();
 $game->run();
 
+var_dump('<pre>');
+var_dump($game);
+var_dump('</pre>');
+
 require 'view.php';
