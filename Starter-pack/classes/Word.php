@@ -2,7 +2,6 @@
 
 class Word
 {
-    // TODO: add word (FR) and answer (EN) - (via constructor or not? why?)
     public $frenchWord;
     public $englishWord;
 
