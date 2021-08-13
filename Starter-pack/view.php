@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <form>
+    <form method="post">
         <p class="randomChoice"> The word to translate: <?php echo $game->randomWord->frenchWord ?> </p>
         <label for="userChoice">Your guess:</label> <br>
         <input type="text" id="userChoice" name="userChoice"><br>
