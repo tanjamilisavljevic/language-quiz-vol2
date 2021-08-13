@@ -15,6 +15,7 @@
         <input type="text" id="userChoice" name="userChoice"><br>
 
         <button type="submit" name="submit">Go</button>
+        <p class="userChoice"></p>
 
     </form>
 </body>
