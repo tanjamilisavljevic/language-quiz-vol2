@@ -20,7 +20,7 @@ class LanguageGame
 
     public function run()
     {
-        // TODO: check for option A or B
+        // done: check for option A or B
 
         if (!empty($_POST['userAnswer']) && isset($_POST['submit'])) {
             $this->startGame();
@@ -38,8 +38,8 @@ class LanguageGame
     }
 
     // Option B: user has just submitted an answer
-    // TODO: verify the answer (use the verify function in the word class) - you'll need to get the used word from the array first
-    // TODO: generate a message for the user that can be shown
+    // done: verify the answer (use the verify function in the word class) - you'll need to get the used word from the array first
+    // done: generate a message for the user that can be shown
     public function startGame()
     {
 
@@ -47,12 +47,9 @@ class LanguageGame
         $userAnswer = $_POST['userAnswer'];
 
 
-        if ($this->randomWord->verify($userAnswer) === true)
-        {
+        if ($this->randomWord->verify($userAnswer) === true) {
             $this->endMessage = 'Correct!';
-        }
-        else
-        {
+        } else {
             $this->endMessage = 'False!';
         }
     }

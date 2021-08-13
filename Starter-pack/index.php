@@ -23,7 +23,7 @@ function whatIsHappening() {
     var_dump($_SESSION);
 }
 
-whatIsHappening();
+//whatIsHappening();
 
 
 // Load your classes
