@@ -11,11 +11,11 @@
 
     <form method="post">
         <p class="randomChoice"> The word to translate: <?php echo $game->randomWord->frenchWord ?> </p>
-        <label for="userChoice">Your guess:</label> <br>
-        <input type="text" id="userChoice" name="userChoice"><br>
+        <label for="userAnswer">Your guess:</label> <br>
+        <input type="text" id="userAnswer" name="userAnswer"><br>
 
         <button type="submit" name="submit">Go</button>
-        <p class="userChoice"></p>
+        <p class="endMessage"></p>
     </form>
 
 </body>
