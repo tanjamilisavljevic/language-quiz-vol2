@@ -2,7 +2,7 @@
 
 class LanguageGame
 {
-    private array $words;
+    private array $words =[];
 
     public function __construct()
     {
